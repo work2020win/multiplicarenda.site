@@ -237,6 +237,30 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <span class="elementor-icon-list-text">🔊 POR FAVOR, VERIFIQUE SE O SEU SOM ESTÁ LIGADO!</span>
 </li>
 </ul>
+
+<span style="color: #d64cff;">
+<div id="viewers">
+  <span></span>  <canvas style="margin-left:1em;margin-right:1em;background-color: #00ff00;width:10px;height:10px;border-radius:100%"></canvas><b>PESSOAS ASSISTINDO AGORA <b> 
+</div>
+<script>
+  document.querySelectorAll("#viewers span")[0].innerHTML = getUsersView();
+
+  setInterval(() => {
+    updatesUsersView();
+  }, 2500);
+
+  function getUsersView() {
+    return Math.floor(Math.random() * (Math.floor(910) - Math.ceil(690))) + Math.ceil(690);
+  }
+
+  function updatesUsersView() {
+    var currentUsers = document.querySelectorAll("#viewers span")[0].innerHTML;
+    var users = Math.floor(Math.random() * (Math.floor(40) - Math.ceil(-40))) + Math.ceil(-40);
+    currentUsers = parseInt(currentUsers) < 690 ? parseInt(currentUsers) + users * user : parseInt(currentUsers) + users;
+    document.querySelectorAll("#viewers span")[0].innerHTML = currentUsers;
+  }
+</script>
+
 </div>
 </div>
 <section class="elementor-section elementor-inner-section elementor-element elementor-element-47a25725 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="47a25725" data-element_type="section" id="aparecer1">
