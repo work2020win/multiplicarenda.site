@@ -228,7 +228,7 @@ else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this))
 
 <span style="color: #d64cff;">
 <div id="viewers">
-<span></span><canvas style="margin-left:1em;margin-right:1em;background-color: #00ff00;width:08px;height:08px;border-radius:80%"></canvas><b>PESSOAS ASSISTINDO AGORA <b> 
+  <span></span>  <canvas style="margin-left:1em;margin-right:1em;background-color: #00ff00;width:10px;height:10px;border-radius:100%"></canvas><b>PESSOAS ASSISTINDO AGORA <b> 
 </div>
 <script>
   document.querySelectorAll("#viewers span")[0].innerHTML = getUsersView();
@@ -238,13 +238,13 @@ else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this))
   }, 2500);
 
   function getUsersView() {
-    return Math.floor(Math.random() * (Math.floor(80) - Math.ceil(190))) + Math.ceil(290);
+    return Math.floor(Math.random() * (Math.floor(910) - Math.ceil(690))) + Math.ceil(690);
   }
 
   function updatesUsersView() {
     var currentUsers = document.querySelectorAll("#viewers span")[0].innerHTML;
     var users = Math.floor(Math.random() * (Math.floor(40) - Math.ceil(-40))) + Math.ceil(-40);
-    currentUsers = parseInt(currentUsers) < 290 ? parseInt(currentUsers) + users * user : parseInt(currentUsers) + users;
+    currentUsers = parseInt(currentUsers) < 690 ? parseInt(currentUsers) + users * user : parseInt(currentUsers) + users;
     document.querySelectorAll("#viewers span")[0].innerHTML = currentUsers;
   }
 </script>
